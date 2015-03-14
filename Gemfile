@@ -9,7 +9,9 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
-gem 'execjs', '1.2.4'
+# gem 'execjs', '1.2.4'
+
+# gem 'execjs', '2.2.2'
 
 # gem 'rb-readline'
 
