@@ -1,0 +1,62 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#logo {
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+
+  }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  > .container {
+
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: $gray-lighter;
+  > .container {
+  	padding-right: 15px;
+  	padding-left: 15px;
+  	.text-muted {
+  		margin: 20px 0;
+  		float: left;
+  	}
+  }
+  ul {
+  	float: right;
+  	list-style: none;
+  	margin-top: 20px;
+  	li {
+  		float: left;
+  		margin-left: 10px;
+  	}
+  }
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+code {
+  font-size: 80%;
+}
