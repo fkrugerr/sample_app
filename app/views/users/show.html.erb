@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-xs-12 col-sm-6 col-md-4">
+  <aside class="col-xs-12 col-sm-5 col-md-3">
     <section>
       <h1>
         <%= gravatar_for @user %>
@@ -8,4 +8,16 @@
       </h1>
     </section>
   </aside>
+
+  <div class="col-xs-12 col-sm-7 col-md-9">
+  	<section class="content">
+  		<% if @user.microposts.any? %>
+  			<h2>Microposts (<%= @user.microposts.count %>)</h2>
+  			<div>
+  				<%= render @microposts %>
+  			</div>
+  			<%= will_paginate @microposts %>
+  		<% end %>
+  	</section>
+  </div>
 </div>
