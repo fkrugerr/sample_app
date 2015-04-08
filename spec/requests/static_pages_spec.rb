@@ -21,15 +21,27 @@ describe "Static pages" do
       let(:user) { FactoryGirl.create(:user) }
       before do
         FactoryGirl.create(:micropost, user: user, content: "Lorem ipsum")
-        FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet")
+        FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet")   
         sign_in user
         visit root_path
       end
+
+      it { should have_selector('span', text: "2 microposts") }
+      it { should have_selector('h3', text: 'Micropost Feed') }
 
       it "should render the user's feed" do
         user.feed.each do |item|
           expect(page).to have_selector("blockquote##{item.id}", text: item.content)
         end
+      end
+
+      describe "pagination" do
+        before do
+          33.times { |n| FactoryGirl.create(:micropost, user: user, content: "Dolor sit amet#{n}") }
+          visit root_path
+        end
+
+        it { should have_selector('div.pagination') }
       end
     end
   end

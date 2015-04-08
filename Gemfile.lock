@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/bmabey/database_cleaner.git
+  revision: bb608dd3ac6b149cbe92a658d3f8abbebfe82f3f
+  specs:
+    database_cleaner (1.4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -171,6 +177,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
+  database_cleaner!
   factory_girl_rails (= 4.2.0)
   faker (= 1.1.2)
   jbuilder (= 1.0.2)
